@@ -1,15 +1,7 @@
 <template>
   <div class="blog">
     <ul>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
-      <li><PostLink></PostLink></li>
+      <li v-for="article in articles" :key="article.title"><PostLink :article="article"></PostLink></li>
     </ul>
   </div>
 </template>
@@ -17,17 +9,18 @@
 
 <script>
 
-import articles from '../articles';
+
 import PostLink from '../components/PostLink.vue';
+import store from '../store';
 
 export default {
   name: 'Blog',
   components: { PostLink },
-  data(){
-    return{
-      title: articles[0].title,
+  computed: {
+    articles(){
+      return store.state.articles;
     }
-  },
+  }
 };
 </script>
 

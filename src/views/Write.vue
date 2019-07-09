@@ -2,16 +2,31 @@
   <div class="write">
     <h2>Write Your Article</h2>
     <form action="">
-      <input type="text" placeholder="title"><br>
-      <textarea name="text" placeholder="text"></textarea>
-      <input type="submit" value="Post">
+      <input type="text" placeholder="title" v-model="title"><br>
+      <textarea name="text" placeholder="text" v-model="text"></textarea>
+      <input type="submit" value="Post" @click="saveArticle">
     </form> 
   </div>
 </template>
 
 <script>
+
+import articles from '../articles';
+import store from '../store';
+
 export default {
-  
+  name: 'write',
+  data(){
+    return{
+      title: '',
+      text: '',
+    }
+  },
+  methods: {
+    saveArticle: function(){
+      store.commit('addArticle',{title: this.title, shortDesctription: this.text, articleText: '' });
+    },
+  }
 }
 </script>
 
@@ -43,8 +58,7 @@ export default {
     margin-bottom: 30px;
     width: 100%;
     padding: 10px;
-    font-size: 110%;  
-    
+    font-size: 110%;   
   }
   textarea{
     width: 100%;
@@ -52,9 +66,7 @@ export default {
     padding: 20px;
     font-size: 80%;
   }
-
   input[type="submit"]{
-
     margin-top: 50px;
     background: #711c91;
     margin-bottom: 0;
@@ -63,5 +75,4 @@ export default {
   input[type="submit"]:hover{
     cursor: pointer;
   }
-
 </style>

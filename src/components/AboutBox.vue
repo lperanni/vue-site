@@ -3,7 +3,7 @@
     <h3>About the blog</h3>
     <div class="content-box">
       <h4>A Blog for Enthusiasts</h4>
-      <p>This blog is a place to express your thoughts in a relaxing way</p>
+      <p>This blog is a place to express your thoughts in a relaxing way. Feel free to sign up and write up an article of your own.</p>
     </div>
   </div>
 </template>

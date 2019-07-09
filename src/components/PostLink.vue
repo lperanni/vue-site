@@ -2,8 +2,8 @@
   <div class="post-link">
     <img src="../assets/logo.png" alt="link-img">
     <div class="description">
-      <h4>Title</h4>
-      <p>Short desciption of article that could also be just the first lines of the whole thing</p>
+      <h4>{{ title }}</h4>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
@@ -11,6 +11,18 @@
 <script>
 export default {
   name: 'post-link',
+  props: {
+    article:{
+      type: Object,
+      required: true,
+    }
+  },
+  data(){
+    return{
+      title: this.article.title,
+      text: this.article.shortDesctription,
+    }
+  }
 }
 </script>
 
