@@ -9,15 +9,17 @@
       <input type="email" v-model="email"><br>
       <label for="password">Password:</label>
       <input type="password" v-model="password"><br>
-      <input type="submit" class="btn btn-full" value="[LOGIN]">
-      <input type="submit" class="btn btn-ghost" value="[SIGNUP]">
+      <div class="btns">
+        <input type="submit" class="btn btn-full" value="[LOGIN]">
+        <input type="submit" class="btn btn-ghost" value="[SIGNUP]">
+      </div>
     </form>  
   </div>  
 </template>
 
 <script>
 export default {
-  name: "sign-in",
+  name: 'sign-in',
   data(){
     return{
       name: '',
@@ -25,13 +27,13 @@ export default {
       password: '',
     }
   },
-}
+};
 </script>
 
 <style scoped>
 
   .signIn{
-    margin: 150px auto;
+    margin: 120px auto;
     background-color: #091833;
     opacity: 0.9;
     padding: 50px;
@@ -63,4 +65,24 @@ export default {
     display: inline;
   }
 
+  /*====BUTTONS=====*/
+.btn{
+  width: 30%;
+  color: #091833;
+  margin-top: 50px;
+}
+.btn-full{
+  background-color: #ea00d9;
+}
+.btn-ghost{
+  border: 1px solid #ea00d9;
+  color: #ea00d9;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.btns{
+  margin-left: 6%;
+}
 </style>
+

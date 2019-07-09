@@ -40,12 +40,10 @@ export default {
   }
   .title-card{
     width: 95%;
-    border: 3px solid#ea00d9;
+    border: 5px solid#ea00d9;
     padding: 40px;
     margin: 20px;
     height: 50%;
-
-    
   }
 </style>
 

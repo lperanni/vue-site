@@ -33,6 +33,7 @@ export default {
     width: 50%;
     margin: 20px;
     padding: 50px;
+    height: fit-content;
   }
 
   .article-text h2{

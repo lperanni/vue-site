@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <h3>About the blog</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat praesentium vero suscipit vitae quas, asperiores commodi eius vel deserunt aperiam fugiat tempora recusandae saepe. Necessitatibus perspiciatis saepe magni suscipit eveniet.</p>
+    <div class="content-box">
+      <h4>A Blog for Enthusiasts</h4>
+      <p>This blog is a place to express your thoughts in a relaxing way</p>
+    </div>
   </div>
 </template>
 
@@ -13,13 +16,33 @@ export default {
 </script>
 
 <style scoped>
+
   .about{
-    border: 2px solid #ea00d9;
+    border: 5px solid black;
     justify-content: space-between; 
     display: block;
     width: 95%;
     margin: 20px;
-    padding: 20px;
-    height: 85%;
+    height: 75%;
+    background-color: rgb(7, 6, 6);
+
+  }
+
+  .about h3{
+    color: #ea00d9;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), #711c91;
+    border-bottom: 5px solid black;
+  }
+
+  h4{
+    margin-bottom: 50px;
+  }
+
+  .content-box{
+    margin: 10px;
+    padding: 10px;
+    height: 70%;
   }
 </style>

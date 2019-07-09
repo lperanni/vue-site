@@ -15,23 +15,3 @@ h3{
 
 }
 
-/*====BUTTONS=====*/
-
-.btn{
-  width: 30%;
-  color: #091833;
-  margin-top: 50px;
-}
-
-.btn-full{
-  background-color: #ea00d9;
-}
-
-.btn-ghost{
-  border: 1px solid #ea00d9;
-  color: #ea00d9;
-}
-
-.btn:hover{
-  cursor: pointer;
-}
