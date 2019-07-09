@@ -1,33 +1,33 @@
 <template>
   <div class="write">
     <h2>Write Your Article</h2>
-    <form action="">
+    <form v-on:submit.prevent="onSubmit">
       <input type="text" placeholder="title" v-model="title"><br>
       <textarea name="text" placeholder="text" v-model="text"></textarea>
       <input type="submit" value="Post" @click="saveArticle">
-    </form> 
+    </form>
   </div>
 </template>
 
 <script>
-
-import articles from '../articles';
 import store from '../store';
 
 export default {
   name: 'write',
-  data(){
-    return{
+  data() {
+    return {
       title: '',
       text: '',
-    }
+    };
   },
   methods: {
-    saveArticle: function(){
-      store.commit('addArticle',{title: this.title, shortDesctription: this.text, articleText: '' });
+    saveArticle() {
+      store.commit('addArticle', { title: this.title, shortDesctription: this.text, articleText: '' });
+      this.title = '';
+      this.text = '';
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -58,7 +58,7 @@ export default {
     margin-bottom: 30px;
     width: 100%;
     padding: 10px;
-    font-size: 110%;   
+    font-size: 110%;
   }
   textarea{
     width: 100%;

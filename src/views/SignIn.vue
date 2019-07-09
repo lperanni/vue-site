@@ -13,19 +13,19 @@
         <input type="submit" class="btn btn-full" value="[LOGIN]">
         <input type="submit" class="btn btn-ghost" value="[SIGNUP]">
       </div>
-    </form>  
-  </div>  
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'sign-in',
-  data(){
-    return{
+  data() {
+    return {
       name: '',
       email: '',
       password: '',
-    }
+    };
   },
 };
 </script>
@@ -85,4 +85,3 @@ export default {
   margin-left: 6%;
 }
 </style>
-

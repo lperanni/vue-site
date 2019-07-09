@@ -20,9 +20,9 @@
 import SearchBar from './components/SearchBar.vue';
 
 export default {
-  components:{SearchBar},
-  
-}
+  components: { SearchBar },
+
+};
 </script>
 
 
@@ -69,6 +69,6 @@ export default {
   .link:hover{
     cursor: pointer;
     box-shadow: none;
-   
+
   }
 </style>

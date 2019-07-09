@@ -1,7 +1,10 @@
 <template>
   <div class="searchBar">
-    <label for="search"><ion-icon name="search"></ion-icon><input v-model="searchItem" type="text" placeholder="Search" @input="searchArticle"></label>
-  </div>  
+    <label for="search">
+      <ion-icon name="search"></ion-icon>
+      <input v-model="searchItem" type="text" placeholder="Search" @input="searchArticle">
+    </label>
+  </div>
 </template>
 
 <script>
@@ -9,19 +12,19 @@
 import router from '../router';
 
 export default {
-  name: "search-bar",
-  data(){
-    return{
+  name: 'search-bar',
+  data() {
+    return {
       searchItem: '',
-    }
+    };
   },
   methods: {
-    searchArticle: function(){
-      router.push("/blog")
-    }
+    searchArticle() {
+      router.push('/blog');
+    },
   },
-  
-}
+
+};
 </script>
 
 <style scoped>
@@ -40,7 +43,7 @@ input{
   display: inline-block;
   padding: 10px;
   font-size: 70%;
-  width: 60%; 
+  width: 60%;
 }
 
 </style>

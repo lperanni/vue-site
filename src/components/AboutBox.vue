@@ -3,7 +3,10 @@
     <h3>About the blog</h3>
     <div class="content-box">
       <h4>A Blog for Enthusiasts</h4>
-      <p>This blog is a place to express your thoughts in a relaxing way. Feel free to sign up and write up an article of your own.</p>
+      <p>
+        This blog is a place to express your thoughts in a relaxing way.
+        Feel free to sign up and write up an article of your own.
+      </p>
     </div>
   </div>
 </template>
@@ -11,15 +14,15 @@
 
 <script>
 export default {
-  name: "about",
-}
+  name: 'about',
+};
 </script>
 
 <style scoped>
 
   .about{
     border: 5px solid black;
-    justify-content: space-between; 
+    justify-content: space-between;
     display: block;
     width: 95%;
     margin: 20px;

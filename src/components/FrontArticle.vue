@@ -12,17 +12,17 @@
 
 <script>
 
-import articles from "../articles";
+import articles from '../articles';
 
 export default {
-  name: "FrontArticle",
-  data(){
-    return{
+  name: 'FrontArticle',
+  data() {
+    return {
       title: articles[0].title,
       shortDesc: articles[0].articleText,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -62,7 +62,7 @@ export default {
     padding: 20px;
     background-color: #711c91;
     border: none;
-  
+
   }
   button:hover{
     cursor: pointer;

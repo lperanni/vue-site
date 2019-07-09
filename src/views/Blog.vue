@@ -1,7 +1,9 @@
 <template>
   <div class="blog">
     <ul>
-      <li v-for="article in articles" :key="article.title"><PostLink :article="article"></PostLink></li>
+      <li v-for="article in articles" :key="article.title">
+        <PostLink :article="article"></PostLink>
+      </li>
     </ul>
   </div>
 </template>
@@ -17,10 +19,10 @@ export default {
   name: 'Blog',
   components: { PostLink },
   computed: {
-    articles(){
+    articles() {
       return store.state.articles;
-    }
-  }
+    },
+  },
 };
 </script>
 

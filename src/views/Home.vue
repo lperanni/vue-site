@@ -14,22 +14,22 @@
 </template>
 
 <script>
-import FrontArticle  from "../components/FrontArticle";
-import About from "../components/AboutBox";
+import FrontArticle from '../components/FrontArticle.vue';
+import About from '../components/AboutBox.vue';
 
 export default {
   name: 'home',
-  components: {FrontArticle, About},
+  components: { FrontArticle, About },
 };
 </script>
 
 <style scoped>
-  
+
   .home{
     width: 100%;
     display: flex;
   }
-  
+
   .top-site{
     justify-content: space-between;
     display: flex;
@@ -46,4 +46,3 @@ export default {
     height: 50%;
   }
 </style>
-

@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   mutations: {
     addArticle(state, article) {
-      state.articles.push(article);
+      state.articles.unshift(article);
     },
   },
   actions: {
