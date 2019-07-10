@@ -1,8 +1,8 @@
 <template>
- <div class="article">
+ <div class="article" @click="gotoArticle">
    <div class="article-text">
     <h2>{{ title }}</h2>
-    <p>{{ shortDesc }}</p>
+    <p>{{ shortText }}</p>
    </div>
   <div class="goto-btn">
     <button>Read</button>
@@ -12,15 +12,29 @@
 
 <script>
 
-import articles from '../articles';
+import store from '../store';
+import router from '../router';
 
 export default {
   name: 'FrontArticle',
   data() {
     return {
-      title: articles[0].title,
-      shortDesc: articles[0].articleText,
+      title: store.state.articles[0].title,
+      text: store.state.articles[0].shortDesctription,
     };
+  },
+  methods: {
+    gotoArticle() {
+      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: 'Dave' } });
+    },
+  },
+  computed: {
+    shortText() {
+      if (this.text.length > 300) {
+        return `${this.text.substring(0, 300)}...`;
+      }
+      return this.text;
+    },
   },
 };
 </script>

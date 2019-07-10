@@ -1,14 +1,17 @@
 <template>
-  <div class="post-link">
+  <div class="post-link" @click="gotoArticle">
     <img src="../assets/logo.png" alt="link-img">
     <div class="description">
       <h4>{{ title }}</h4>
-      <p>{{ text }}</p>
+      <p>{{ shortText }}</p>
     </div>
   </div>
 </template>
 
 <script>
+
+import router from '../router';
+
 export default {
   name: 'post-link',
   props: {
@@ -22,6 +25,19 @@ export default {
       title: this.article.title,
       text: this.article.shortDesctription,
     };
+  },
+  computed: {
+    shortText() {
+      if (this.text.length > 100) {
+        return `${this.text.substring(0, 100)}...`;
+      }
+      return this.text;
+    },
+  },
+  methods: {
+    gotoArticle() {
+      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: 'Mark' } });
+    },
   },
 };
 </script>

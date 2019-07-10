@@ -48,6 +48,7 @@ export default {
     border: 1px solid black;
     padding: 40px;
     background-color: rgba(0,0,0,0.6);
+    width: 100%;
   }
 
   input, textarea{
@@ -64,7 +65,7 @@ export default {
     width: 100%;
     height: 400px;
     padding: 20px;
-    font-size: 80%;
+    font-size: 90%;
   }
   input[type="submit"]{
     margin-top: 50px;

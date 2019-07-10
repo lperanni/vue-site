@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import SignIn from './views/SignIn.vue';
 import Blog from './views/Blog.vue';
 import Write from './views/Write.vue';
+import Article from './views/Article.vue';
 
 Vue.use(Router);
 
@@ -29,6 +30,12 @@ export default new Router({
       path: '/write',
       name: 'write',
       component: Write,
+    },
+    {
+      path: '/article',
+      name: 'article',
+      component: Article,
+      props: true,
     },
   ],
 });
