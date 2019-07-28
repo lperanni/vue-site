@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     gotoArticle() {
-      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: 'Dave' } });
+      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: store.state.user.userName } });
     },
   },
   computed: {
@@ -63,6 +63,8 @@ export default {
 
   .article-text p{
     line-height: 30px;
+    word-wrap: break-word;
+    max-width: 90%;
   }
 
   .goto-btn{

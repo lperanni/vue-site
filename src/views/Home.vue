@@ -26,8 +26,9 @@ export default {
 <style scoped>
 
   .home{
-    width: 100%;
+    width: 100vw;
     display: flex;
+    height: 90%;
   }
 
   .top-site{

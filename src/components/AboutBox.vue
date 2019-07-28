@@ -28,7 +28,7 @@ export default {
     margin: 20px;
     height: 75%;
     background-color: rgb(7, 6, 6);
-
+    margin-bottom: 0px;
   }
 
   .about h3{

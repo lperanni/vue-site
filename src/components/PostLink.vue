@@ -11,6 +11,7 @@
 <script>
 
 import router from '../router';
+import store from '../store';
 
 export default {
   name: 'post-link',
@@ -36,7 +37,7 @@ export default {
   },
   methods: {
     gotoArticle() {
-      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: 'Mark' } });
+      router.push({ name: 'article', params: { title: this.title, articleBody: this.text, author: store.state.user.userName } });
     },
   },
 };

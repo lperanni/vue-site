@@ -2,7 +2,7 @@
   <div class="signIn">
     <h2>Establishing Connection</h2>
     <p><strong>Welcome to Blogster</strong> - Enter your credentials below</p>
-    <form>
+    <form v-on:submit.prevent="onSubmit">
       <label for="name">Name:</label>
       <input type="text" v-model="name"><br>
       <label for="email">Email:</label>
@@ -10,14 +10,19 @@
       <label for="password">Password:</label>
       <input type="password" v-model="password"><br>
       <div class="btns">
-        <input type="submit" class="btn btn-full" value="[LOGIN]">
-        <input type="submit" class="btn btn-ghost" value="[SIGNUP]">
+        <input type="submit" class="btn btn-full" value="[LOGIN]" @click="signIn">
+        <input type="submit" class="btn btn-ghost" value="[SIGNUP]" @click.prevent="register">
       </div>
     </form>
   </div>
 </template>
 
 <script>
+
+import axios from 'axios';
+import checkCredentials from '../libs/authenticateSignIn';
+import { get } from 'http';
+
 export default {
   name: 'sign-in',
   data() {
@@ -26,6 +31,29 @@ export default {
       email: '',
       password: '',
     };
+  },
+  methods: {
+    signIn() {
+      axios.post('http://localhost:5000/api/users/login', { 
+        body:{
+          username: this.name,
+          password: this.password
+        },
+      })
+      .then(res => alert(res))
+      .catch(err => alert(err));
+      
+    },
+    register() {
+
+      axios.post('http://localhost/5000/api/users/register', JSON.stringify({
+          username: this.name,
+          password: this.password,
+          email: this.email
+      }))
+        .then(res => alert(res))
+        .catch(err => alert(err));
+    },
   },
 };
 </script>

@@ -18,11 +18,14 @@ export default {
     return {
       title: '',
       text: '',
+      author: store.state.user.userName,
     };
   },
   methods: {
     saveArticle() {
-      store.commit('addArticle', { title: this.title, shortDesctription: this.text, articleText: '' });
+      store.commit('addArticle', {
+        title: this.title, shortDesctription: this.text, articleText: '', author: this.author,
+      });
       this.title = '';
       this.text = '';
     },

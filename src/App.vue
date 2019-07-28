@@ -18,6 +18,7 @@
 <script>
 
 import SearchBar from './components/SearchBar.vue';
+import store from './store';
 
 export default {
   components: { SearchBar },
